@@ -1,0 +1,12 @@
+<p>message works!</p>
+<p style="font-weight:bold;">{{todayDate}}</p>
+<div *ngIf='getMessage()'>
+    <ul *ngFor='let message1 of getMessage()'>
+        <li>{{message1}}</li>
+
+    </ul>
+    <br/>
+    <button type='reset' (click)='reset()'>reset</button>
+</div>
+
+<app-counter></app-counter>

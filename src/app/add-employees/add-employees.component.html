@@ -1,0 +1,45 @@
+<!-- <p>Adding Employee</p> -->
+<div *ngIf='employee'>
+    <h1>id:{{employee.id}}</h1>
+    <h1>Name:{{employee.name}}</h1>
+    <h1>salary:{{employee.salary}}</h1>
+</div>
+<mat-card>
+    <h1>Add Employees</h1>
+</mat-card>
+<br>
+<mat-divider></mat-divider>
+<div></div>
+<mat-card>
+    <mat-form-field class="example-full-width">
+        <mat-label>Employee Id</mat-label>
+        <input matInput placeholder="id.. " value="" [(ngModel)]=' employee.id '>
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="example-full-width">
+        <mat-label>Employee Name</mat-label>
+        <input matInput placeholder="Name.. " value="" [(ngModel)]='employee.name '>
+    </mat-form-field>
+    <br/>
+    <mat-form-field class="example-full-width">
+        <mat-label>Salary</mat-label>
+        <input matInput placeholder="salary ... in Rupees " value="" [(ngModel)]='employee.salary '>
+    </mat-form-field>
+    <br/>
+    <br/>
+    <div class="example-button-row1">
+        <button mat-flat-button color="primary" (click)=submit(employee)>Add</button>
+        <a routerLink='/employeeList'>
+            <button type="button" mat-fab color="accent" aria-label="Example icon button with a delete icon" type="submit"><mat-icon>home</mat-icon></button></a>
+        <button mat-flat-button color="primary" (click)=updateEmployee()>Update</button>
+    </div>
+</mat-card>
+{{count$ | async}}
+<!-- <label for="emp-id">Employee Id</label>
+    <input id='emp-id ' placeholder='id ' [(ngModel)]='employee.id '>
+    <label for="emp-name">Employee name</label>
+    <input id='emp-name ' placeholder='name ' [(ngModel)]='employee.name '>
+    <label for="emp-salary">Employee salary</label>
+    <input id='emp-salry ' placeholder='salary ' [(ngModel)]='employee.salary '> -->
+
+<app-counter></app-counter>

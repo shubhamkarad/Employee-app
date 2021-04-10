@@ -1,0 +1,107 @@
+<!-- <p>employees works!</p>
+<h3>{{employees}}</h3> -->
+
+
+<head>
+</head>
+
+<body>
+    <br/><br/>
+    <mat-toolbar>
+        <span class="tool"><h2>Employee Details</h2></span>
+    </mat-toolbar>
+    <table mat-table [dataSource]="employeeData" class="mat-elevation-z8">
+
+        <ng-container matColumnDef="id">
+            <th mat-header-cell *matHeaderCellDef>ID</th>
+            <td mat-cell *matCellDef="let employeeData"> {{employeeData.id}} </td>
+        </ng-container>
+        <ng-container matColumnDef="name">
+            <th mat-header-cell *matHeaderCellDef>Name</th>
+            <td mat-cell *matCellDef="let employeeData"> {{employeeData.name}} </td>
+        </ng-container>
+        <ng-container matColumnDef="salary">
+            <th mat-header-cell *matHeaderCellDef>Salary</th>
+            <td mat-cell *matCellDef="let employee1"> {{employee1.salary}} </td>
+        </ng-container>
+        <ng-container matColumnDef="details">
+            <th mat-header-cell *matHeaderCellDef>Details</th>
+            <td mat-cell *matCellDef="let employee1">
+                <a routerLink='/employeeDetails/{{employee1.id}}'>
+                    <mat-icon>visibility</mat-icon>
+                </a>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="update">
+            <th mat-header-cell *matHeaderCellDef>Update</th>
+            <td mat-cell *matCellDef="let employee1">
+                <a routerLink='/addEmployee/{{employee1.id}}'>
+                    <button type="button" mat-fab color="accent" aria-label="Example icon button with a delete icon" type="submit" (click)='updateEmployee(employee1)'><mat-icon>edit</mat-icon></button></a>
+            </td>
+        </ng-container>
+        <ng-container matColumnDef="delete">
+            <th mat-header-cell *matHeaderCellDef>Delete</th>
+            <td mat-cell *matCellDef="let employeeData"> <button mat-fab color="accent" aria-label="Example icon button with a delete icon" type="submit" (click)='deleteEmployee(employeeData)'>
+            <mat-icon>delete</mat-icon></button> </td>
+        </ng-container>
+        <tr *ngFor='let employee1 of employeeData ; index as i' (click)='onselect(employee1) '></tr>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+    </table>
+    <br/><br/>
+    <div>
+        <mat-card>
+            <h2>Add a new Employee</h2>
+            <a routerLink='/addEmployee'>
+                <button mat-stroked-button color="accent">Add here</button>
+            </a>
+        </mat-card>
+    </div>
+    <!-- we have used for loop here -->
+    <!-- <table>
+        <tr>
+            <th>Emp Id</th>
+            <th>Emp Salary</th>
+        </tr>
+        <tr *ngFor='let employee1 of employeeData ; index as i' (click)='onselect(employee1) '>
+            <td><a routerLink='/employeeDetails/{{employee1.id}}'>{{employee1.id}}</a> </td>
+            <td><a routerLink='/employeeDetails/{{employee1.id}}'>{{employee1.name}}</a></td>
+            <td><a routerLink='/employeeDetails/{{employee1.id}}'>{{employee1.salary}}</a></td>
+            <td>
+                <section>
+                    <div class="example-label"></div>
+                    <div class="example-button-row">
+                        <div class="example-flex-container">
+                            <div class="example-button-container">
+
+                                <button mat-fab color="accent" aria-label="Example icon button with a delete icon" type="submit" (click)='deleteEmployee(employee1)'>
+                                        <mat-icon >delete</mat-icon>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </section> -->
+    <!-- <button type="submit" (click)='deleteEmployee(employee1)'>Delete</button> -->
+    <!-- </td>
+            <td>
+                <div class="example-label"></div>
+                <div class="example-button-row">
+                    <a routerLink='/addEmployee/{{employee1.id}}'>
+                        <button type="button" mat-stroked-button color="accent" (click)='updateEmployee(employee1)'>Update Data</button>
+                    </a>
+                </div>
+            </td>
+        </tr>
+
+    </table> -->
+
+    <!-- <div *ngIf='selectedEmployee'>
+        selected Employee is {{selectedEmployee.name}}.
+    </div> -->
+    <button class="btn" type="reset" *ngIf='selectedEmployee' (click)='onclick()' name="clear">
+    <!-- {{selectedEmployee.name}} -->
+clear</button>
+    <!-- <app-employee-details [employee]="selectedEmployee"></app-employee-details> -->
+
+</body>
+<button (click)='increment()'>Increment</button>

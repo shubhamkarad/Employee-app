@@ -1,0 +1,56 @@
+.example-form {
+    min-width: 150px;
+    max-width: 500px;
+    width: 100%;
+    padding-left: 25px;
+}
+
+.mat-flat-button {
+    border-radius: 20px;
+}
+
+.mat1 {
+    background-color: blue;
+}
+
+.example-full-width {
+    width: 100%;
+}
+
+.example-button-row {
+    display: table-cell;
+    width: 490px;
+}
+
+.mat-form-field {
+    padding-left: 25px;
+    width: 250px;
+    margin-left: 250px;
+    padding-bottom: 25px;
+}
+
+.icon {
+    margin-left: 300px;
+}
+
+.example-button-row1 {
+    margin-left: 230px;
+    padding: 25px;
+}
+
+.mat-flat-button {
+    margin: 25px;
+}
+
+.mat-card {
+    background-color: blanchedalmond;
+    width: 850px;
+    margin-left: 520px;
+}
+
+
+/* .mat-flat-button {} */
+
+.mat-icon {
+    width: 48px;
+}

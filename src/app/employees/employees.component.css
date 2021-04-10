@@ -1,0 +1,78 @@
+.example-label {
+    display: table-cell;
+    font-size: 14px;
+    margin-left: 8px;
+    min-width: 120px;
+}
+
+.mat-toolbar {
+    width: 820px;
+    margin-left: 510px;
+    margin-top: 10px;
+    border-radius: 10px;
+    background-color: rgba(151, 57, 69, 0.719);
+    color: white;
+}
+
+.example-button-row {
+    display: table-cell;
+    width: 490px;
+}
+
+.example-button-row .mat-button-base {
+    margin: 8px 8px 8px 0;
+}
+
+.example-flex-container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.example-button-container {
+    display: flex;
+    justify-content: center;
+    width: 120px;
+}
+
+.tool {
+    padding: 10px 310px;
+}
+
+table {
+    width: 100%;
+}
+
+.mat-icon {
+    font-size: 25px;
+    width: 25px;
+    line-height: 5px;
+}
+
+.mat-fab {
+    font-size: 40px;
+    width: 40px;
+    height: 40px;
+    margin-top: 10px;
+}
+
+.mat-header-cell {
+    background-color: rgba(151, 57, 69, 0.719);
+    color: honeydew;
+}
+
+.mat-table {
+    padding: 10px;
+    margin-left: 510px;
+    margin-top: 40px;
+    width: 820px;
+}
+
+.mat-card {
+    width: 300px;
+    margin-left: 510px;
+}
+
+.mat-stroked-button {
+    border-radius: 25px;
+}

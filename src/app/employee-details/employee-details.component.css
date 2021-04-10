@@ -1,0 +1,15 @@
+.mat-card-content {
+    padding-left: 150px;
+}
+
+.mat-card {
+    background-color: rgba(246, 191, 191, 0.315);
+    width: 450px;
+    align-self: center;
+    margin-left: 700px;
+    margin-top: 250px;
+}
+
+.mat-card-header {
+    padding-left: 10px;
+}
